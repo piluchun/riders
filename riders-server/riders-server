@@ -1,0 +1,98 @@
+#!/bin/sh
+
+DIRNAME=`dirname $0`
+# Setup PROXY_HOME
+if [ "x$PROXY_HOME" = "x" ];
+then
+    # get the full path (without any relative bits)
+    PROXY_HOME=`cd $DIRNAME;pwd`
+fi
+
+JAVA_HOME=/usr/java/jdk1.6.0_18
+
+PATH=$PROXY_HOME/command:$PATH
+
+
+# check dbproxy service 
+ 
+if test -d $PROXY_HOME/service
+then
+    #echo "dbproxy supervise directory [$PROXY_HOME/service] exist"
+    echo 
+else
+    echo "dbproxy supervise directory [$PROXY_HOME/service] not exist!"
+    exit 0
+fi
+
+
+
+case "$1"  in
+
+start)
+  
+    if [ -z `ps ax | grep DbProxyServer | grep -v grep | awk '{print $1}' | xargs -l1` ] 
+    then
+
+            echo "starting DbProxyServer ..."
+            $PROXY_HOME/command/svscan $PROXY_HOME/service &
+    else
+            echo "DbProxyServer has already started."
+    fi
+
+    echo "done"
+    ;; 
+
+stop)
+
+#check if service has been started 
+    
+    
+    #
+    #   stop all service monitors
+    #
+            
+    $PROXY_HOME/command/svc -d $PROXY_HOME/service/dbproxy
+
+ 	SVID=`ps ax | grep 'svscan '$PROXY_HOME'/service' | grep -v grep | awk '{print $1}' | xargs -l1`
+    #echo "svscan uid " $SVID
+    if [ ! -z "$SVID" ]
+      then
+        kill -9 "$SVID"
+        echo "svcan stoped."
+    fi
+    
+    SUID=`ps ax | grep 'supervise dbproxy' | grep -v grep | awk '{print $1}' | xargs -l1`
+    if [ ! -z "$SUID" ]
+     then
+       kill -9 $SUID
+       echo "supervise stop."
+    fi
+
+
+    RESULT=`ps ax | grep DbProxyServer | grep -v grep | awk '{print $1}' | xargs -l1`
+    #echo "result=[$RESULT]"
+    if [ ! -z "$RESULT" ]
+    then
+    	#   stop all running service programs
+      	echo "stopping DbProxyServer ..."
+        ps ax | grep DbProxyServer | grep -v grep | awk '{print $1}' | xargs -l1 kill 
+        echo "DbProxyServer stoped."
+     else
+            echo "no started process found ."
+     fi
+            
+     echo "done"
+     ;;
+     
+preload)
+	echo "PreLoad Data Start .. "
+	exec $PROXY_HOME/bin/startup.sh preload &
+    echo "done"
+    ;;
+     
+*)
+    echo "command is not supported"
+    exit 1
+    ;;
+
+esac
