@@ -35,4 +35,12 @@ public class ServerConstants {
     public static final String ERROR_REQEST = "{\"error_code\":\"-1\",\"error_msg\":\"bad request\"}";
     
     public static final String DEFAULT_SUCCESS = "{\"error_code\":\"0\",\"error_msg\":\"successed\"}";
+    
+    public static final String ERROR_RESULT_CONTENT = "{\"result\":\"-999\",\"msg\":\"server inner error!\"}";
+    
+    public static final String SEND_MSG_SUCCESSED = "{\"result\":\"0\",\"msg\":\"message send successed.\"}";
+    
+    public static final String SEND_MSG_FAILED = "{\"result\":\"-1\",\"msg\":\"message send failed.\"}";
+
+	public static final String TO_SERVER = "server";
 }

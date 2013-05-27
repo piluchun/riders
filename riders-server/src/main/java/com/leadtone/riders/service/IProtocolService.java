@@ -6,6 +6,6 @@ public interface IProtocolService {
 
 	public String process(RidersMessage message);
 	
-	public boolean router(RidersMessage message);
+	public boolean route(String message);
 	
 }

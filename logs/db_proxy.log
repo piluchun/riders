@@ -1,0 +1,461 @@
+2013-05-27 18:18:11 -[INFO] [org.springframework.context.support.AbstractApplicationContext] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@69198891: startup date [Mon May 27 18:18:11 CST 2013]; root of context hierarchy
+2013-05-27 18:18:11 -[INFO] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [applicationContext.xml]
+2013-05-27 18:18:13 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [jdbc.properties]
+2013-05-27 18:18:13 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config.properties]
+2013-05-27 18:18:13 -[INFO] [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@3ad3c6a3: defining beans [initEnvironment,dbCheckTimerTask,ridersWebSocketServer,ridersWebSocketServerHandler,ridersWebSocketServerInitializer,bizServiceImpl,messageServiceImpl,configAnnotationBeanPostProcessor,initConfigLoader,bossMemCacheClient,memCacheClient,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,propertyPlaceHolderConfigurer,dataSource,nativeJdbcExtractor,jdbcTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PERMIT_IP_LIST : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SYNC_GEGW_RETRY_ERROR_CODE : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SELF.PERMIT_IP_LIST : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_BPU_POLICY : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_SETTING_USERSTATUS_LIST : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.BIND_NUM : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_APN : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_FLAG : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.TCP_PROXY : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_NODE_POLICY : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE101.BPU_ADDR_LIST : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INSTANT_SETTING_FLAG : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.MEMCACHE_POOL_SIZE : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.FREE_BIND_NUM : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_DETAIL : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.20_BIND_NUM : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_URL : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_URL : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.EXPIRE_TIME_SCALE : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.BPU_ADDR_LIST : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MIG_MANAGER_ADDRESS : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.TEMP_TIME : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_MS_ID : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_FLAG : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NUM : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_INFO : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NAME_LIST : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.PASSWORD : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PASSWORD : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_NODE : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.5_BIND_NUM : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.BOSS_MEM_ADDR_AND_PORT : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_EMN_USERSTATUS_LIST : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.SERVICE_URL : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE002.BPU_ADDR_LIST : null
+2013-05-27 18:18:13 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SMS.DEFAULT_DEVICE : null
+2013-05-27 18:18:13 -[INFO] [com.mchange.v2.log.MLog] MLog clients using log4j logging.
+2013-05-27 18:18:14 -[INFO] [com.mchange.v2.c3p0.C3P0Registry] Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2013-05-27 18:18:14 -[INFO] [com.leadtone.riders.InitEnvironment] init applicationContext successed!
+2013-05-27 18:18:14 -[INFO] [com.leadtone.riders.InitEnvironment] init log4j successed!
+2013-05-27 18:18:14 -[INFO] [com.leadtone.riders.RidersServer] inited environment successed!
+2013-05-27 18:18:14 -[INFO] [io.netty.util.internal.PlatformDependent] You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2013-05-27 18:18:15 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Web socket server started at port 10009.
+2013-05-27 18:18:15 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Open your browser and navigate to http://localhost:10009/
+2013-05-27 18:20:04 -[WARN] [io.netty.channel.ChannelInitializer] Failed to initialize a channel. Closing: [id: 0x8c66987f, /127.0.0.1:62189 => /127.0.0.1:10009]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'ridersWebSocketServerHandler': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.leadtone.riders.service.IProtocolService com.leadtone.riders.server.RidersWebSocketServerHandler.protocolService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.leadtone.riders.service.IProtocolService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:288)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1116)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:519)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:458)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:314)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:198)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:273)
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1125)
+	at com.leadtone.riders.server.RidersWebSocketServerInitializer.initChannel(RidersWebSocketServerInitializer.java:42)
+	at com.leadtone.riders.server.RidersWebSocketServerInitializer.initChannel(RidersWebSocketServerInitializer.java:1)
+	at io.netty.channel.ChannelInitializer.channelRegistered(ChannelInitializer.java:70)
+	at io.netty.channel.DefaultChannelHandlerContext.invokeChannelRegistered(DefaultChannelHandlerContext.java:796)
+	at io.netty.channel.DefaultChannelHandlerContext.fireChannelRegistered(DefaultChannelHandlerContext.java:781)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelRegistered(DefaultChannelPipeline.java:777)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.register0(AbstractChannel.java:660)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe.access$700(AbstractChannel.java:541)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$4.run(AbstractChannel.java:637)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:364)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:326)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:114)
+	at java.lang.Thread.run(Thread.java:662)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: private com.leadtone.riders.service.IProtocolService com.leadtone.riders.server.RidersWebSocketServerHandler.protocolService; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.leadtone.riders.service.IProtocolService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:514)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:87)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:285)
+	... 20 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.leadtone.riders.service.IProtocolService] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:986)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:856)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:768)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:486)
+	... 22 more
+2013-05-27 18:22:36 -[INFO] [org.springframework.context.support.AbstractApplicationContext] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@b551d7f: startup date [Mon May 27 18:22:36 CST 2013]; root of context hierarchy
+2013-05-27 18:22:36 -[INFO] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [applicationContext.xml]
+2013-05-27 18:22:37 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [jdbc.properties]
+2013-05-27 18:22:37 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config.properties]
+2013-05-27 18:22:37 -[INFO] [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e4865ce: defining beans [initEnvironment,dbCheckTimerTask,ridersWebSocketServer,ridersWebSocketServerHandler,ridersWebSocketServerInitializer,bizServiceImpl,protocolServiceImpl,configAnnotationBeanPostProcessor,initConfigLoader,bossMemCacheClient,memCacheClient,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,propertyPlaceHolderConfigurer,dataSource,nativeJdbcExtractor,jdbcTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PERMIT_IP_LIST : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SYNC_GEGW_RETRY_ERROR_CODE : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SELF.PERMIT_IP_LIST : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_BPU_POLICY : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_SETTING_USERSTATUS_LIST : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.BIND_NUM : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_APN : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_FLAG : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.TCP_PROXY : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_NODE_POLICY : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE101.BPU_ADDR_LIST : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INSTANT_SETTING_FLAG : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.MEMCACHE_POOL_SIZE : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.FREE_BIND_NUM : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_DETAIL : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.20_BIND_NUM : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_URL : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_URL : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.EXPIRE_TIME_SCALE : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.BPU_ADDR_LIST : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MIG_MANAGER_ADDRESS : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.TEMP_TIME : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_MS_ID : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_FLAG : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NUM : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_INFO : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NAME_LIST : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.PASSWORD : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PASSWORD : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_NODE : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.5_BIND_NUM : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.BOSS_MEM_ADDR_AND_PORT : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_EMN_USERSTATUS_LIST : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.SERVICE_URL : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE002.BPU_ADDR_LIST : null
+2013-05-27 18:22:37 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SMS.DEFAULT_DEVICE : null
+2013-05-27 18:22:37 -[INFO] [com.mchange.v2.log.MLog] MLog clients using log4j logging.
+2013-05-27 18:22:37 -[INFO] [com.mchange.v2.c3p0.C3P0Registry] Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2013-05-27 18:22:37 -[INFO] [com.leadtone.riders.InitEnvironment] init applicationContext successed!
+2013-05-27 18:22:37 -[INFO] [com.leadtone.riders.InitEnvironment] init log4j successed!
+2013-05-27 18:22:37 -[INFO] [com.leadtone.riders.RidersServer] inited environment successed!
+2013-05-27 18:22:37 -[INFO] [io.netty.util.internal.PlatformDependent] You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2013-05-27 18:22:37 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Web socket server started at port 10009.
+2013-05-27 18:22:37 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Open your browser and navigate to http://localhost:10009/
+2013-05-27 18:23:54 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -193023788 received {"id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"creationDate":"20130227121212","status":"0"}
+2013-05-27 18:23:55 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] handleWebSocketFrame error : Unrecognized field "id" (class com.leadtone.riders.protocol.beans.RidersMessage), not marked as ignorable (7 known properties: , "status", "msg_id", "content", "from", "createDate", "to", "subject"])
+ at [Source: java.io.StringReader@3fb6772a; line: 1, column: 8] (through reference chain: com.leadtone.riders.protocol.beans.RidersMessage["id"])
+2013-05-27 18:23:55 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "id" (class com.leadtone.riders.protocol.beans.RidersMessage), not marked as ignorable (7 known properties: , "status", "msg_id", "content", "from", "createDate", "to", "subject"])
+ at [Source: java.io.StringReader@3fb6772a; line: 1, column: 8] (through reference chain: com.leadtone.riders.protocol.beans.RidersMessage["id"])
+2013-05-27 18:24:25 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -193023788 received {"ms_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"creationDate":"20130227121212","status":"0"}
+2013-05-27 18:24:25 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] handleWebSocketFrame error : Unrecognized field "ms_id" (class com.leadtone.riders.protocol.beans.RidersMessage), not marked as ignorable (7 known properties: , "status", "msg_id", "content", "from", "createDate", "to", "subject"])
+ at [Source: java.io.StringReader@18f63055; line: 1, column: 11] (through reference chain: com.leadtone.riders.protocol.beans.RidersMessage["ms_id"])
+2013-05-27 18:24:25 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "ms_id" (class com.leadtone.riders.protocol.beans.RidersMessage), not marked as ignorable (7 known properties: , "status", "msg_id", "content", "from", "createDate", "to", "subject"])
+ at [Source: java.io.StringReader@18f63055; line: 1, column: 11] (through reference chain: com.leadtone.riders.protocol.beans.RidersMessage["ms_id"])
+2013-05-27 18:25:13 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -193023788 received {"msg_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"creationDate":"20130227121212","status":"0"}
+2013-05-27 18:25:13 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] handleWebSocketFrame error : Can not deserialize instance of java.lang.String out of START_OBJECT token
+ at [Source: java.io.StringReader@4adf2940; line: 1, column: 64] (through reference chain: com.leadtone.riders.protocol.beans.RidersMessage["content"])
+2013-05-27 18:25:13 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] com.fasterxml.jackson.databind.JsonMappingException: Can not deserialize instance of java.lang.String out of START_OBJECT token
+ at [Source: java.io.StringReader@4adf2940; line: 1, column: 64] (through reference chain: com.leadtone.riders.protocol.beans.RidersMessage["content"])
+2013-05-27 18:26:22 -[INFO] [org.springframework.context.support.AbstractApplicationContext] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@b551d7f: startup date [Mon May 27 18:26:22 CST 2013]; root of context hierarchy
+2013-05-27 18:26:22 -[INFO] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [applicationContext.xml]
+2013-05-27 18:26:23 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [jdbc.properties]
+2013-05-27 18:26:23 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config.properties]
+2013-05-27 18:26:23 -[INFO] [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@50d17ec3: defining beans [initEnvironment,dbCheckTimerTask,ridersWebSocketServer,ridersWebSocketServerHandler,ridersWebSocketServerInitializer,bizServiceImpl,protocolServiceImpl,configAnnotationBeanPostProcessor,initConfigLoader,bossMemCacheClient,memCacheClient,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,propertyPlaceHolderConfigurer,dataSource,nativeJdbcExtractor,jdbcTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PERMIT_IP_LIST : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SYNC_GEGW_RETRY_ERROR_CODE : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SELF.PERMIT_IP_LIST : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_BPU_POLICY : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_SETTING_USERSTATUS_LIST : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.BIND_NUM : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_APN : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_FLAG : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.TCP_PROXY : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_NODE_POLICY : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE101.BPU_ADDR_LIST : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INSTANT_SETTING_FLAG : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.MEMCACHE_POOL_SIZE : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.FREE_BIND_NUM : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_DETAIL : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.20_BIND_NUM : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_URL : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_URL : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.EXPIRE_TIME_SCALE : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.BPU_ADDR_LIST : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MIG_MANAGER_ADDRESS : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.TEMP_TIME : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_MS_ID : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_FLAG : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NUM : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_INFO : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NAME_LIST : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.PASSWORD : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PASSWORD : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_NODE : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.5_BIND_NUM : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.BOSS_MEM_ADDR_AND_PORT : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_EMN_USERSTATUS_LIST : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.SERVICE_URL : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE002.BPU_ADDR_LIST : null
+2013-05-27 18:26:23 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SMS.DEFAULT_DEVICE : null
+2013-05-27 18:26:23 -[INFO] [com.mchange.v2.log.MLog] MLog clients using log4j logging.
+2013-05-27 18:26:23 -[INFO] [com.mchange.v2.c3p0.C3P0Registry] Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2013-05-27 18:26:23 -[INFO] [com.leadtone.riders.InitEnvironment] init applicationContext successed!
+2013-05-27 18:26:23 -[INFO] [com.leadtone.riders.InitEnvironment] init log4j successed!
+2013-05-27 18:26:23 -[INFO] [com.leadtone.riders.RidersServer] inited environment successed!
+2013-05-27 18:26:23 -[INFO] [io.netty.util.internal.PlatformDependent] You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2013-05-27 18:26:23 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Web socket server started at port 10009.
+2013-05-27 18:26:23 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Open your browser and navigate to http://localhost:10009/
+2013-05-27 18:26:34 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -431696654 received {"msg_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"creationDate":"20130227121212","status":"0"}
+2013-05-27 18:26:34 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] handleWebSocketFrame error : Unrecognized field "creationDate" (class com.leadtone.riders.protocol.beans.RidersMessage), not marked as ignorable (7 known properties: , "status", "msg_id", "content", "from", "createDate", "to", "subject"])
+ at [Source: java.io.StringReader@637050f5; line: 1, column: 126] (through reference chain: com.leadtone.riders.protocol.beans.RidersMessage["creationDate"])
+2013-05-27 18:26:34 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "creationDate" (class com.leadtone.riders.protocol.beans.RidersMessage), not marked as ignorable (7 known properties: , "status", "msg_id", "content", "from", "createDate", "to", "subject"])
+ at [Source: java.io.StringReader@637050f5; line: 1, column: 126] (through reference chain: com.leadtone.riders.protocol.beans.RidersMessage["creationDate"])
+2013-05-27 18:27:20 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -431696654 received {"msg_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"createDate":"20130227121212","status":"0"}
+2013-05-27 18:27:20 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] handleWebSocketFrame error : java.util.LinkedHashMap cannot be cast to java.lang.String
+2013-05-27 18:27:20 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] java.lang.ClassCastException: java.util.LinkedHashMap cannot be cast to java.lang.String
+2013-05-27 18:29:15 -[INFO] [org.springframework.context.support.AbstractApplicationContext] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@69198891: startup date [Mon May 27 18:29:15 CST 2013]; root of context hierarchy
+2013-05-27 18:29:15 -[INFO] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [applicationContext.xml]
+2013-05-27 18:29:15 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [jdbc.properties]
+2013-05-27 18:29:15 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config.properties]
+2013-05-27 18:29:16 -[INFO] [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e4865ce: defining beans [initEnvironment,dbCheckTimerTask,ridersWebSocketServer,ridersWebSocketServerHandler,ridersWebSocketServerInitializer,bizServiceImpl,protocolServiceImpl,configAnnotationBeanPostProcessor,initConfigLoader,bossMemCacheClient,memCacheClient,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,propertyPlaceHolderConfigurer,dataSource,nativeJdbcExtractor,jdbcTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PERMIT_IP_LIST : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SYNC_GEGW_RETRY_ERROR_CODE : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SELF.PERMIT_IP_LIST : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_BPU_POLICY : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_SETTING_USERSTATUS_LIST : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.BIND_NUM : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_APN : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_FLAG : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.TCP_PROXY : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_NODE_POLICY : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE101.BPU_ADDR_LIST : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INSTANT_SETTING_FLAG : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.MEMCACHE_POOL_SIZE : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.FREE_BIND_NUM : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_DETAIL : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.20_BIND_NUM : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_URL : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_URL : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.EXPIRE_TIME_SCALE : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.BPU_ADDR_LIST : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MIG_MANAGER_ADDRESS : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.TEMP_TIME : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_MS_ID : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_FLAG : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NUM : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_INFO : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NAME_LIST : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.PASSWORD : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PASSWORD : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_NODE : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.5_BIND_NUM : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.BOSS_MEM_ADDR_AND_PORT : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_EMN_USERSTATUS_LIST : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.SERVICE_URL : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE002.BPU_ADDR_LIST : null
+2013-05-27 18:29:16 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SMS.DEFAULT_DEVICE : null
+2013-05-27 18:29:16 -[INFO] [com.mchange.v2.log.MLog] MLog clients using log4j logging.
+2013-05-27 18:29:16 -[INFO] [com.mchange.v2.c3p0.C3P0Registry] Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2013-05-27 18:29:16 -[INFO] [com.leadtone.riders.InitEnvironment] init applicationContext successed!
+2013-05-27 18:29:16 -[INFO] [com.leadtone.riders.InitEnvironment] init log4j successed!
+2013-05-27 18:29:16 -[INFO] [com.leadtone.riders.RidersServer] inited environment successed!
+2013-05-27 18:29:16 -[INFO] [io.netty.util.internal.PlatformDependent] You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2013-05-27 18:29:16 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Web socket server started at port 10009.
+2013-05-27 18:29:16 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Open your browser and navigate to http://localhost:10009/
+2013-05-27 18:29:27 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -1573911848 received {"msg_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"createDate":"20130227121212","status":"0"}
+2013-05-27 18:29:28 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] handleWebSocketFrame error : java.util.LinkedHashMap cannot be cast to java.lang.String
+2013-05-27 18:30:34 -[INFO] [org.springframework.context.support.AbstractApplicationContext] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4c53ab04: startup date [Mon May 27 18:30:34 CST 2013]; root of context hierarchy
+2013-05-27 18:30:34 -[INFO] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [applicationContext.xml]
+2013-05-27 18:30:34 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [jdbc.properties]
+2013-05-27 18:30:34 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config.properties]
+2013-05-27 18:30:34 -[INFO] [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c33c658: defining beans [initEnvironment,dbCheckTimerTask,ridersWebSocketServer,ridersWebSocketServerHandler,ridersWebSocketServerInitializer,bizServiceImpl,protocolServiceImpl,configAnnotationBeanPostProcessor,initConfigLoader,bossMemCacheClient,memCacheClient,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,propertyPlaceHolderConfigurer,dataSource,nativeJdbcExtractor,jdbcTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PERMIT_IP_LIST : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SYNC_GEGW_RETRY_ERROR_CODE : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SELF.PERMIT_IP_LIST : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_BPU_POLICY : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_SETTING_USERSTATUS_LIST : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.BIND_NUM : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_APN : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_FLAG : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.TCP_PROXY : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_NODE_POLICY : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE101.BPU_ADDR_LIST : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INSTANT_SETTING_FLAG : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.MEMCACHE_POOL_SIZE : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.FREE_BIND_NUM : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_DETAIL : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.20_BIND_NUM : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_URL : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_URL : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.EXPIRE_TIME_SCALE : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.BPU_ADDR_LIST : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MIG_MANAGER_ADDRESS : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.TEMP_TIME : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_MS_ID : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_FLAG : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NUM : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_INFO : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NAME_LIST : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.PASSWORD : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PASSWORD : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_NODE : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.5_BIND_NUM : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.BOSS_MEM_ADDR_AND_PORT : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_EMN_USERSTATUS_LIST : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.SERVICE_URL : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE002.BPU_ADDR_LIST : null
+2013-05-27 18:30:35 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SMS.DEFAULT_DEVICE : null
+2013-05-27 18:30:35 -[INFO] [com.mchange.v2.log.MLog] MLog clients using log4j logging.
+2013-05-27 18:30:35 -[INFO] [com.mchange.v2.c3p0.C3P0Registry] Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2013-05-27 18:30:35 -[INFO] [com.leadtone.riders.InitEnvironment] init applicationContext successed!
+2013-05-27 18:30:35 -[INFO] [com.leadtone.riders.InitEnvironment] init log4j successed!
+2013-05-27 18:30:35 -[INFO] [com.leadtone.riders.RidersServer] inited environment successed!
+2013-05-27 18:30:35 -[INFO] [io.netty.util.internal.PlatformDependent] You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2013-05-27 18:30:35 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Web socket server started at port 10009.
+2013-05-27 18:30:35 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Open your browser and navigate to http://localhost:10009/
+2013-05-27 18:30:44 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -1801982464 received {"msg_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"createDate":"20130227121212","status":"0"}
+2013-05-27 18:36:27 -[INFO] [org.springframework.context.support.AbstractApplicationContext] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@b551d7f: startup date [Mon May 27 18:36:27 CST 2013]; root of context hierarchy
+2013-05-27 18:36:27 -[INFO] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [applicationContext.xml]
+2013-05-27 18:36:27 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [jdbc.properties]
+2013-05-27 18:36:27 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config.properties]
+2013-05-27 18:36:27 -[INFO] [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@e4865ce: defining beans [initEnvironment,dbCheckTimerTask,ridersWebSocketServer,ridersWebSocketServerHandler,ridersWebSocketServerInitializer,bizServiceImpl,protocolServiceImpl,configAnnotationBeanPostProcessor,initConfigLoader,bossMemCacheClient,memCacheClient,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,propertyPlaceHolderConfigurer,dataSource,nativeJdbcExtractor,jdbcTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PERMIT_IP_LIST : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SYNC_GEGW_RETRY_ERROR_CODE : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SELF.PERMIT_IP_LIST : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_BPU_POLICY : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_SETTING_USERSTATUS_LIST : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.BIND_NUM : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_APN : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_FLAG : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.TCP_PROXY : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_NODE_POLICY : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE101.BPU_ADDR_LIST : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INSTANT_SETTING_FLAG : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.MEMCACHE_POOL_SIZE : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.FREE_BIND_NUM : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_DETAIL : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.20_BIND_NUM : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_URL : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_URL : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.EXPIRE_TIME_SCALE : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.BPU_ADDR_LIST : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MIG_MANAGER_ADDRESS : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.TEMP_TIME : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_MS_ID : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_FLAG : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NUM : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_INFO : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NAME_LIST : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.PASSWORD : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PASSWORD : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_NODE : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.5_BIND_NUM : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.BOSS_MEM_ADDR_AND_PORT : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_EMN_USERSTATUS_LIST : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.SERVICE_URL : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE002.BPU_ADDR_LIST : null
+2013-05-27 18:36:28 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SMS.DEFAULT_DEVICE : null
+2013-05-27 18:36:28 -[INFO] [com.mchange.v2.log.MLog] MLog clients using log4j logging.
+2013-05-27 18:36:28 -[INFO] [com.mchange.v2.c3p0.C3P0Registry] Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2013-05-27 18:36:28 -[INFO] [com.leadtone.riders.InitEnvironment] init applicationContext successed!
+2013-05-27 18:36:28 -[INFO] [com.leadtone.riders.InitEnvironment] init log4j successed!
+2013-05-27 18:36:28 -[INFO] [com.leadtone.riders.RidersServer] inited environment successed!
+2013-05-27 18:36:28 -[INFO] [io.netty.util.internal.PlatformDependent] You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2013-05-27 18:36:28 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Web socket server started at port 10009.
+2013-05-27 18:36:28 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Open your browser and navigate to http://localhost:10009/
+2013-05-27 18:36:37 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -391215402 received {"msg_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"createDate":"20130227121212","status":"0"}
+2013-05-27 18:36:37 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] handleWebSocketFrame error : No content to map due to end-of-input
+ at [Source: java.io.StringReader@1a7df60a; line: 1, column: 1]
+2013-05-27 18:37:31 -[INFO] [org.springframework.context.support.AbstractApplicationContext] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4c53ab04: startup date [Mon May 27 18:37:31 CST 2013]; root of context hierarchy
+2013-05-27 18:37:31 -[INFO] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [applicationContext.xml]
+2013-05-27 18:37:32 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [jdbc.properties]
+2013-05-27 18:37:32 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config.properties]
+2013-05-27 18:37:32 -[INFO] [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1c33c658: defining beans [initEnvironment,dbCheckTimerTask,ridersWebSocketServer,ridersWebSocketServerHandler,ridersWebSocketServerInitializer,bizServiceImpl,protocolServiceImpl,configAnnotationBeanPostProcessor,initConfigLoader,bossMemCacheClient,memCacheClient,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,propertyPlaceHolderConfigurer,dataSource,nativeJdbcExtractor,jdbcTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PERMIT_IP_LIST : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SYNC_GEGW_RETRY_ERROR_CODE : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SELF.PERMIT_IP_LIST : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_BPU_POLICY : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_SETTING_USERSTATUS_LIST : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.BIND_NUM : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_APN : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_FLAG : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.TCP_PROXY : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_NODE_POLICY : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE101.BPU_ADDR_LIST : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INSTANT_SETTING_FLAG : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.MEMCACHE_POOL_SIZE : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.FREE_BIND_NUM : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_DETAIL : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.20_BIND_NUM : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_URL : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_URL : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.EXPIRE_TIME_SCALE : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.BPU_ADDR_LIST : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MIG_MANAGER_ADDRESS : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.TEMP_TIME : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_MS_ID : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_FLAG : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NUM : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_INFO : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NAME_LIST : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.PASSWORD : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PASSWORD : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_NODE : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.5_BIND_NUM : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.BOSS_MEM_ADDR_AND_PORT : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_EMN_USERSTATUS_LIST : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.SERVICE_URL : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE002.BPU_ADDR_LIST : null
+2013-05-27 18:37:32 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SMS.DEFAULT_DEVICE : null
+2013-05-27 18:37:32 -[INFO] [com.mchange.v2.log.MLog] MLog clients using log4j logging.
+2013-05-27 18:37:32 -[INFO] [com.mchange.v2.c3p0.C3P0Registry] Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2013-05-27 18:37:32 -[INFO] [com.leadtone.riders.InitEnvironment] init applicationContext successed!
+2013-05-27 18:37:32 -[INFO] [com.leadtone.riders.InitEnvironment] init log4j successed!
+2013-05-27 18:37:32 -[INFO] [com.leadtone.riders.RidersServer] inited environment successed!
+2013-05-27 18:37:32 -[INFO] [io.netty.util.internal.PlatformDependent] You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2013-05-27 18:37:32 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Web socket server started at port 10009.
+2013-05-27 18:37:32 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Open your browser and navigate to http://localhost:10009/
+2013-05-27 18:37:44 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -1633602375 received {"msg_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"createDate":"20130227121212","status":"0"}
+2013-05-27 18:38:45 -[ERROR] [com.leadtone.riders.server.RidersWebSocketServerHandler] handleWebSocketFrame error : No content to map due to end-of-input
+ at [Source: java.io.StringReader@65087be0; line: 1, column: 1]
+2013-05-27 18:39:17 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -1633602375 received {"msg_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"createDate":"20130227121212","status":"0"}
+2013-05-27 18:39:52 -[INFO] [org.springframework.context.support.AbstractApplicationContext] Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@8542529: startup date [Mon May 27 18:39:52 CST 2013]; root of context hierarchy
+2013-05-27 18:39:52 -[INFO] [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] Loading XML bean definitions from class path resource [applicationContext.xml]
+2013-05-27 18:39:52 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [jdbc.properties]
+2013-05-27 18:39:52 -[INFO] [org.springframework.core.io.support.PropertiesLoaderSupport] Loading properties file from class path resource [config.properties]
+2013-05-27 18:39:53 -[INFO] [org.springframework.beans.factory.support.DefaultListableBeanFactory] Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f5d8d75: defining beans [initEnvironment,dbCheckTimerTask,ridersWebSocketServer,ridersWebSocketServerHandler,ridersWebSocketServerInitializer,bizServiceImpl,protocolServiceImpl,configAnnotationBeanPostProcessor,initConfigLoader,bossMemCacheClient,memCacheClient,org.springframework.context.annotation.internalConfigurationAnnotationProcessor,org.springframework.context.annotation.internalAutowiredAnnotationProcessor,org.springframework.context.annotation.internalRequiredAnnotationProcessor,org.springframework.context.annotation.internalCommonAnnotationProcessor,propertyPlaceHolderConfigurer,dataSource,nativeJdbcExtractor,jdbcTemplate,org.springframework.context.annotation.ConfigurationClassPostProcessor.importAwareProcessor]; root of factory hierarchy
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PERMIT_IP_LIST : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SYNC_GEGW_RETRY_ERROR_CODE : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SELF.PERMIT_IP_LIST : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_BPU_POLICY : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_SETTING_USERSTATUS_LIST : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.BIND_NUM : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_APN : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_FLAG : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.TCP_PROXY : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DISPATCH_NODE_POLICY : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE101.BPU_ADDR_LIST : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INSTANT_SETTING_FLAG : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.MEMCACHE_POOL_SIZE : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.FREE_BIND_NUM : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_DETAIL : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.20_BIND_NUM : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CLEAN_USER_DATA_URL : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_URL : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.EXPIRE_TIME_SCALE : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE001.BPU_ADDR_LIST : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MIG_MANAGER_ADDRESS : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.TEMP_TIME : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_MS_ID : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.GEGW_USER_SYNC_FLAG : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NUM : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.CHARGE_INFO : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE_NAME_LIST : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.COLORCLOUD.PASSWORD : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.MGR.SMS_PASSWORD : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.DEFAULT_NODE : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.INTERFACE.5_BIND_NUM : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.BOSS_MEM_ADDR_AND_PORT : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ALLOW_EMN_USERSTATUS_LIST : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.ACCOUNT.SERVICE_URL : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.NODE002.BPU_ADDR_LIST : null
+2013-05-27 18:39:53 -[INFO] [com.leadtone.mig.tools.config.InitConfigLoader] MIG.SMS.DEFAULT_DEVICE : null
+2013-05-27 18:39:53 -[INFO] [com.mchange.v2.log.MLog] MLog clients using log4j logging.
+2013-05-27 18:39:53 -[INFO] [com.mchange.v2.c3p0.C3P0Registry] Initializing c3p0-0.9.1 [built 16-January-2007 14:46:42; debug? true; trace: 10]
+2013-05-27 18:39:53 -[INFO] [com.leadtone.riders.InitEnvironment] init applicationContext successed!
+2013-05-27 18:39:53 -[INFO] [com.leadtone.riders.InitEnvironment] init log4j successed!
+2013-05-27 18:39:53 -[INFO] [com.leadtone.riders.RidersServer] inited environment successed!
+2013-05-27 18:39:53 -[INFO] [io.netty.util.internal.PlatformDependent] You don't have Javassist in your class path or you don't have enough permission to load dynamically generated classes.  Please check the configuration for better performance.
+2013-05-27 18:39:53 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Web socket server started at port 10009.
+2013-05-27 18:39:53 -[INFO] [com.leadtone.riders.server.RidersWebSocketServer] Open your browser and navigate to http://localhost:10009/
+2013-05-27 18:40:00 -[INFO] [com.leadtone.riders.server.RidersWebSocketServerHandler] Channel -1759942228 received {"msg_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"createDate":"20130227121212","status":"0"}
+2013-05-27 18:40:52 -[INFO] [com.leadtone.riders.server.ResponseHelper] Sync response to client : {"msg_id":"server-lvqi-1369651226934","from":"server","to":"lvqi","subject":"login","content":"{\"result\":0,\"msg\":\"login successed!\"}","createDate":"1369651226934","status":"0"}
