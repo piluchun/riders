@@ -7,36 +7,12 @@
 		</layout>
 	</appender>
 	<appender name="file" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="../logs/db_proxy.log" />
+		<param name="File" value="../logs/riders.log" />
 		<param name="DatePattern" value="'.'yyyy-MM-dd" />
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss} -[%p] [%C] %m%n" />
 		</layout>
 	</appender>
-	<appender name="preload" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="../logs/data_sync.log" />
-		<param name="DatePattern" value="'.'yyyy-MM-dd" />
-		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss} -[%p] [%C] %m%n" />
-		</layout>
-	</appender>
-	<appender name="datacheck" class="org.apache.log4j.DailyRollingFileAppender">
-		<param name="File" value="../logs/data_check.log" />
-		<param name="DatePattern" value="'.'yyyy-MM-dd" />
-		<layout class="org.apache.log4j.PatternLayout">
-			<param name="ConversionPattern" value="%-d{yyyy-MM-dd HH:mm:ss} -[%p] [%C] %m%n" />
-		</layout>
-	</appender>
-	<logger name="com.leadtone.dbproxy.datasync" additivity="false">
-			<level value="info" />
-			<appender-ref ref="console" />
-			<appender-ref ref="preload" />
-	</logger>
-	<logger name="com.leadtone.dbproxy.datacheck" additivity="false">
-			<level value="info" />
-			<appender-ref ref="console" />
-			<appender-ref ref="datacheck" />
-	</logger>
 	
 	<!-- <logger name="com.leadtone" additivity="false">
 			<level value="info" />

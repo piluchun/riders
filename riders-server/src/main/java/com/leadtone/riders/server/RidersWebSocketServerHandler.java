@@ -43,6 +43,7 @@ import io.netty.handler.codec.http.websocketx.WebSocketServerHandshaker;
 import io.netty.handler.codec.http.websocketx.WebSocketServerHandshakerFactory;
 import io.netty.util.CharsetUtil;
 
+import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.log4j.Logger;
@@ -52,7 +53,6 @@ import org.springframework.stereotype.Component;
 
 import com.leadtone.riders.ConcurrentContext;
 import com.leadtone.riders.ServerConstants;
-import com.leadtone.riders.protocol.beans.ResultInfo;
 import com.leadtone.riders.protocol.beans.RidersMessage;
 import com.leadtone.riders.protocol.converter.ProtocolConverter;
 import com.leadtone.riders.service.IProtocolService;
@@ -162,23 +162,24 @@ public class RidersWebSocketServerHandler extends ChannelInboundMessageHandlerAd
 			String result = "";
 			// 如果TO== server 则表明为同步操作，否则为异步
 			if (ServerConstants.TO_SERVER.equals(message.getTo())) {
-				String processResult = protocolService.process(message);
+				HashMap<String,Object> processResult = protocolService.process(message);
 				// 首先判断subject是不是LOGIN 如果是就判断返回值如果是 {"result":0,"msg":"xxx"}
 				// 则表明登陆成功，将EMAIL地址和通道信息缓存
 				// map 里面存放的是 From 为key ，RiderChannel为Value 的键值对。
 				if (ServerConstants.SUBJECT_LOGIN.equalsIgnoreCase(message.getSubject())) {
-					ResultInfo resultInfo = ProtocolConverter.marshallResultInfo(processResult);
-					if (resultInfo.getResult() == 0) {
+					Integer resultCode = (Integer) processResult.get("result");
+					if ( resultCode == 0) {
+						riderChannel.setLogined(true);
 						channelsMap.put(message.getFrom(), riderChannel);
 					}
 				}
 				message.setContent(processResult);
 				result = ResponseHelper.genSyncResponse(message);
 			} else {
-				if (protocolService.route(request)) {
-					message.setContent(ServerConstants.SEND_MSG_SUCCESSED);
+				if (protocolService.route(message.getFrom(),message.getTo(),request)) {
+					message.setContent(ProtocolConverter.getSentMsgSuccessedContent());
 				} else {
-					message.setContent(ServerConstants.SEND_MSG_FAILED);
+					message.setContent(ProtocolConverter.getSentMsgFailedContent());
 				}
 				result = ResponseHelper.genAsyncResponse(message);
 			}
