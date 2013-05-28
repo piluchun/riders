@@ -1,0 +1,35 @@
+编译与打包
+
+1：安装maven 
+2：在工程目录下执行 mvn clean eclipse:eclipse
+3：将conf 加入classpath
+4：将3rd_lib 中的 mig-commons-tools.jar 安装到 maven 库中 (artifactid groupid 见POM文件)
+5：找到RidersServer 执行
+
+
+测试
+1：找到src/test/resource/websocketx/html5 目录。
+2：使用chrome 浏览器打开websocket.html 
+3：启动服务端 riders-server 
+4：如果Web Socket opend 表示服务器已经连接上
+5：模拟登陆操作(同步操作) [browser1]
+	5.1：在输入框中输入 {"msg_id":"1vafd","from":"lvqi","to":"server","subject":"login","content":{"email":"lvqi","password":"1234"},"createDate":"20130227121212","status":"0"}
+	5.2：如果收到{"msg_id":"server-lvqi-1369730662863","from":"server","to":"lvqi","subject":"login","content":{"result":0,"msg":"login successed!"},"createDate":"1369730662863","status":"0"} 则表示成功登陆
+6：模拟发广播操作(异步操作) 
+	6.1：再打开一个浏览器，并打开websocket.html  [browser2]
+	6.2：重复模拟登陆操作，备注：修改 from ，email 为新值
+	6.3：输入 {"msg_id":"1vafd","from":"xiaop","to":"all","subject":"msg","content":{"msg_type":"text","text":"hello"},"createDate":"20130227121212","status":"0"}
+	6.4：查看browser1，如果收到{"msg_id":"1vafd","from":"xiaop","to":"all","subject":"msg","content":{"msg_type":"text","text":"hello"},"createDate":"20130227121212","status":"0"} 表示投递成功
+	6.5：查看browser2，如果收到{"msg_id":"xiaop-all-1369730989120","from":"xiaop","to":"all","subject":"msg","content":{"result":0,"msg":"message send successed."},"createDate":"1369730989120","status":"0"} 表示服务器成功接收
+7：模拟点对点消息投递(异步操作)
+	7.1：在browser1中输入 {"msg_id":"1vafd","from":"lvqi","to":"xiaop","subject":"msg","content":{"msg_type":"text","text":"hello"},"createDate":"20130227121212","status":"0"}
+	7.2：若与6.4,6.5显示一致则表明投递成功
+	
+协议说明
+	{"msg_id":"1vafd",	//消息ID，由发起方生成 from-to-currentTime组成
+	"from":"lvqi",		//发起方 email地址
+	"to":"server",		//接收方 server|其他 分别表示同步与异步
+	"subject":"login",	//消息类型
+	"content":{"email":"lvqi","password":"1234"},	// 消息体
+	"createDate":"20130227121212",	//消息发起时间
+	"status":"0"}		//是否被投递
