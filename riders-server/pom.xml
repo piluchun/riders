@@ -255,7 +255,7 @@
 
 
 	<build>
-		<finalName>dbproxy</finalName>
+		<finalName>riders-server</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
