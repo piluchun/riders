@@ -28,6 +28,9 @@ public class ServerConstants {
     
     public static final String SUBJECT_LOGIN="login";
     
+    public static final String SUBJECT_PROFILE="profile";
+    
+    
 	public static final String TO_SERVER = "server";
 	
 	public static final String TO_ALL = "all";
