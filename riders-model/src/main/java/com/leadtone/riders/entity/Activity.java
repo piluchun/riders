@@ -27,7 +27,7 @@ import com.google.common.collect.Lists;
 @Table(name = "activity")
 public class Activity {
 
-	private Integer aid;
+	private Long aid;
 
 	private User owner;
 
@@ -41,11 +41,11 @@ public class Activity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer getAid() {
+	public Long getAid() {
 		return aid;
 	}
 
-	public void setAid(Integer aid) {
+	public void setAid(Long aid) {
 		this.aid = aid;
 	}
 

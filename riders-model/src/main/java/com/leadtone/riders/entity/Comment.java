@@ -17,7 +17,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @Table(name = "comment")
 public class Comment {
 
-	private Integer cid;
+	private Long cid;
 
 	private Activity activity;
 
@@ -29,11 +29,11 @@ public class Comment {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer getCid() {
+	public Long getCid() {
 		return cid;
 	}
 
-	public void setCid(Integer cid) {
+	public void setCid(Long cid) {
 		this.cid = cid;
 	}
 

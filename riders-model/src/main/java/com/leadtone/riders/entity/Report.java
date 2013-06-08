@@ -18,7 +18,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @Table(name="report")
 public class Report {
 
-	private Integer rid;
+	private Long rid;
 	
 	private User uid;
 	
@@ -41,11 +41,11 @@ public class Report {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer getRid() {
+	public Long getRid() {
 		return rid;
 	}
 
-	public void setRid(Integer rid) {
+	public void setRid(Long rid) {
 		this.rid = rid;
 	}
 

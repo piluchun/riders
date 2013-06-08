@@ -15,7 +15,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @Table(name = "suggestion")
 public class Suggestion {
 
-	private Integer sid;
+	private Long sid;
 
 	private User proposer;
 
@@ -25,11 +25,11 @@ public class Suggestion {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer getSid() {
+	public Long getSid() {
 		return sid;
 	}
 
-	public void setSid(Integer sid) {
+	public void setSid(Long sid) {
 		this.sid = sid;
 	}
 

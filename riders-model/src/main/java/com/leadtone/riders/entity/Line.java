@@ -12,7 +12,7 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 @Table(name = "line")
 public class Line {
 
-	private Integer lid;
+	private Long lid;
 
 	private String city;
 
@@ -28,11 +28,11 @@ public class Line {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer getLid() {
+	public Long getLid() {
 		return lid;
 	}
 
-	public void setLid(Integer lid) {
+	public void setLid(Long lid) {
 		this.lid = lid;
 	}
 

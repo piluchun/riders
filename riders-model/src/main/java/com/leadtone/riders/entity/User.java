@@ -28,7 +28,7 @@ import com.google.common.collect.Lists;
 @Table(name = "user")
 public class User{
 
-	private Integer uid;
+	private Long uid;
 	
 	private String email;
 	
@@ -58,11 +58,11 @@ public class User{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer getUid() {
+	public Long getUid() {
 		return uid;
 	}
 
-	public void setUid(Integer uid) {
+	public void setUid(Long uid) {
 		this.uid = uid;
 	}
 

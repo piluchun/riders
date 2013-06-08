@@ -27,7 +27,7 @@ import com.google.common.collect.Lists;
 @Table(name = "team")
 public class Team {
 
-	private Integer tid;
+	private Long tid;
 
 	private User leader;
 
@@ -39,11 +39,11 @@ public class Team {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	public Integer getTid() {
+	public Long getTid() {
 		return tid;
 	}
 
-	public void setTid(Integer tid) {
+	public void setTid(Long tid) {
 		this.tid = tid;
 	}
 
