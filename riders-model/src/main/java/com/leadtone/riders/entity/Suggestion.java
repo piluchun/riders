@@ -1,5 +1,7 @@
 package com.leadtone.riders.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,7 +15,12 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @Entity
 @Table(name = "suggestion")
-public class Suggestion {
+public class Suggestion implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 7156523983170412151L;
 
 	private Long sid;
 

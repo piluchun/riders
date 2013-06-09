@@ -1,5 +1,6 @@
 package com.leadtone.riders.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
@@ -15,7 +16,12 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @Entity
 @Table(name = "comment")
-public class Comment {
+public class Comment implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -5316897985629938372L;
 
 	private Long cid;
 

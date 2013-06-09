@@ -32,7 +32,7 @@ import com.google.common.collect.Lists;
 @Entity
 @Table(name = "ss_admin")
 // 默认的缓存策略.
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Admin extends IdEntity {
 	private String loginName;
 	private String plainPassword;
@@ -114,7 +114,7 @@ public class Admin extends IdEntity {
 	// 集合按id排序
 	@OrderBy("id ASC")
 	// 缓存策略
-	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+//	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 	public List<Role> getRoleList() {
 		return roleList;
 	}

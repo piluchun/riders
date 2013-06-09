@@ -52,6 +52,11 @@
 	</repositories>
 
 
+	<modules>
+		<module>riders-model</module>
+		<module>riders-persistent</module>
+	</modules>
+
 	<dependencyManagement>
 		<!-- 依赖项定义 -->
 		<dependencies>
@@ -550,6 +555,13 @@
 	</build>
 
 	<profiles>
+		<profile>
+			<id>assembly</id>
+			<modules>
+				<module>../riders-model</module>
+				<module>../riders-persistent</module>
+			</modules>
+		</profile>
 		<!-- 执行functional test -->
 		<profile>
 			<id>functional-test</id>

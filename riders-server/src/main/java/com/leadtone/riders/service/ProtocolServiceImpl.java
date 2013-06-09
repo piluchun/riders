@@ -10,6 +10,7 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.leadtone.riders.BizKeyEnum;
 import com.leadtone.riders.ConcurrentContext;
 import com.leadtone.riders.ServerConstants;
 import com.leadtone.riders.protocol.beans.RidersMessage;
@@ -32,11 +33,29 @@ public class ProtocolServiceImpl implements IProtocolService {
 		String subject = message.getSubject();
 
 		if (StringUtils.isBlank(subject)) {
-
 			return ProtocolConverter.getDefaultErrorSubject();
 		}
-		if (ServerConstants.SUBJECT_LOGIN.equals(subject)) {
+		BizKeyEnum mk = BizKeyEnum.getEnum(subject.toUpperCase());
+		switch (mk) {
+		case LOGIN:
 			result = authUser(message.getContent());
+			break;
+		case REGISTER_USER:
+			break;
+		case GET_USER_PROFILE:
+			break;
+		case GET_TEAM_INFO:
+			break;
+		case GET_FRIENDS:
+			break;
+		case GET_ACTIVITY:
+			break;
+		case GET_ACTIVITY_LIST:
+			break;
+		case UPDATE_USER_PROFILE:
+			break;
+		default:
+			result = ProtocolConverter.getDefaultErrorSubject();
 		}
 		return result;
 
@@ -61,10 +80,11 @@ public class ProtocolServiceImpl implements IProtocolService {
 
 	private void writeToChannel(RiderChannel channel, String request) {
 		try {
-			if(channel.isLogined()){
+			if (channel.isLogined()) {
 				channel.getChannel().write(new TextWebSocketFrame(request));
 			} else {
-				//	TODO
+				// TODO
+				log.info("BAD REQUEST. (not logined)");
 			}
 		} catch (Exception e) {
 			log.error(e);

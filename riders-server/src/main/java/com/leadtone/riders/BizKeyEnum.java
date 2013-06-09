@@ -8,18 +8,18 @@ package com.leadtone.riders;
  * 
  */
 
-public enum MemKeyEnum {
+public enum BizKeyEnum {
 	LOGIN(0), 
 	REGISTER_USER(1), GET_USER_PROFILE(2),GET_TEAM_INFO(3),GET_FRIENDS(4) , GET_ACTIVITY(5) , GET_ACTIVITY_LIST(6) , UPDATE_USER_PROFILE(7);
 
-	private static MemKeyEnum[] allEnums = { 
+	private static BizKeyEnum[] allEnums = { 
 		LOGIN, 
 		REGISTER_USER, GET_USER_PROFILE,GET_TEAM_INFO,GET_FRIENDS , GET_ACTIVITY , GET_ACTIVITY_LIST , UPDATE_USER_PROFILE};
 
-	private MemKeyEnum(int value) {
+	private BizKeyEnum(int value) {
 	}
 
-	public static MemKeyEnum[] getAllEnums() {
+	public static BizKeyEnum[] getAllEnums() {
 		return allEnums;
 	}
 
@@ -27,7 +27,7 @@ public enum MemKeyEnum {
 		return ordinal();
 	}
 
-	public static MemKeyEnum getEnum(int value) {
+	public static BizKeyEnum getEnum(int value) {
 		switch (value) {
 		case 0:
 			return LOGIN;
@@ -50,27 +50,27 @@ public enum MemKeyEnum {
 		}
 	}
 
-	public static MemKeyEnum getEnum(String value) {
-		return MemKeyEnum.valueOf(value);
+	public static BizKeyEnum getEnum(String value) {
+		return BizKeyEnum.valueOf(value);
 	}
 
 	/**
 	 * Checks whether the enum's value is greater than the input enum's value.
 	 */
-	public boolean above(MemKeyEnum input) {
+	public boolean above(BizKeyEnum input) {
 		return compareTo(input) > 0;
 	}
 
 	/**
 	 * Checks whether the enum's value is less than the input enum's value.
 	 */
-	public boolean below(MemKeyEnum input) {
+	public boolean below(BizKeyEnum input) {
 		return compareTo(input) < 0;
 	}
 
 	public static void main(String[] args) throws Exception {
-		System.out.println(MemKeyEnum.LOGIN.ordinal());
-		System.out.println(MemKeyEnum.getEnum("LOGIN"));
+		System.out.println(BizKeyEnum.LOGIN.ordinal());
+		System.out.println(BizKeyEnum.getEnum("LOGIN"));
 	}
 
 }

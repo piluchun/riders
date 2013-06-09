@@ -1,5 +1,7 @@
 package com.leadtone.riders.entity;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,7 +12,12 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 
 @Entity
 @Table(name = "line")
-public class Line {
+public class Line implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 480923546566427429L;
 
 	private Long lid;
 

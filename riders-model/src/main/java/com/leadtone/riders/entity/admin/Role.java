@@ -20,7 +20,7 @@ import com.google.common.collect.ImmutableList;
  */
 @Entity
 @Table(name = "ss_role")
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Role extends IdEntity {
 
 	private String name;

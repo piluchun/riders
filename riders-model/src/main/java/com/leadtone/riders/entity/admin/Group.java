@@ -22,7 +22,7 @@ import com.leadtone.riders.entity.User;
  */
 @Entity
 @Table(name = "ss_group")
-@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+//@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 public class Group extends IdEntity {
 
 	private String name;

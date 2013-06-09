@@ -1,5 +1,6 @@
 package com.leadtone.riders.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -25,7 +26,12 @@ import com.google.common.collect.Lists;
 
 @Entity
 @Table(name = "activity")
-public class Activity {
+public class Activity implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3754934476329455366L;
 
 	private Long aid;
 
@@ -92,7 +98,7 @@ public class Activity {
 	// 集合按id排序
 	@OrderBy("id ASC")
 	// 缓存策略
-	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
+//	@Cache(usage = CacheConcurrencyStrategy.READ_WRITE)
 	public List<User> getActivityMembers() {
 		return activityMembers;
 	}
