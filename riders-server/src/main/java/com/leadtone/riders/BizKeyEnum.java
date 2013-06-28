@@ -9,12 +9,27 @@ package com.leadtone.riders;
  */
 
 public enum BizKeyEnum {
+	// 用户登陆
 	LOGIN(0), 
-	REGISTER_USER(1), GET_USER_PROFILE(2),GET_TEAM_INFO(3),GET_FRIENDS(4) , GET_ACTIVITY(5) , GET_ACTIVITY_LIST(6) , UPDATE_USER_PROFILE(7);
+	// 用户注册
+	REGISTER(1),
+	// 获取用户信息
+	GET_USER_PROFILE(2),
+	// 获取车队信息
+	GET_TEAM_INFO(3),
+	// 获取好友列表
+	GET_FRIENDS(4) ,
+	// 获取活动
+	GET_ACTIVITY(5) ,
+	// 获取活动列表
+	GET_ACTIVITY_LIST(6),
+	// 更新用户信息
+	UPDATE_USER_PROFILE(7),
+	;
 
 	private static BizKeyEnum[] allEnums = { 
 		LOGIN, 
-		REGISTER_USER, GET_USER_PROFILE,GET_TEAM_INFO,GET_FRIENDS , GET_ACTIVITY , GET_ACTIVITY_LIST , UPDATE_USER_PROFILE};
+		REGISTER, GET_USER_PROFILE,GET_TEAM_INFO,GET_FRIENDS , GET_ACTIVITY , GET_ACTIVITY_LIST , UPDATE_USER_PROFILE};
 
 	private BizKeyEnum(int value) {
 	}
@@ -32,7 +47,7 @@ public enum BizKeyEnum {
 		case 0:
 			return LOGIN;
 		case 1:
-			return REGISTER_USER;
+			return REGISTER;
 		case 2:
 			return GET_USER_PROFILE;
 		case 3:

@@ -1,7 +1,6 @@
 package com.leadtone.riders.protocol.converter;
 
 import java.io.IOException;
-import java.util.HashMap;
 
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
@@ -17,44 +16,56 @@ public class ProtocolConverter {
 		RidersMessage msg = mapper.readValue(requestStr, RidersMessage.class);
 		return msg;
 	}
-
-	public static HashMap<String,Object> getDefaultErrorSubject(){
-		HashMap<String,Object> resultMap = new HashMap<String,Object>();
-		resultMap.put("error_code", -2);
-		resultMap.put("error_msg", "unsupport subject");
-		return resultMap;
-	}
-	
-	public static HashMap<String,Object> getDefaultErrorRequest(){
-		HashMap<String,Object> resultMap = new HashMap<String,Object>();
-		resultMap.put("error_code", -1);
-		resultMap.put("error_msg", "bad request");
-		return resultMap;
-	}
-	public static HashMap<String,Object> getDefaultSuccessed(){
-		HashMap<String,Object> resultMap = new HashMap<String,Object>();
-		resultMap.put("error_code", 0);
-		resultMap.put("error_msg", "successed");
-		return resultMap;
-	}
-	public static HashMap<String,Object> getInnerErrorContent(){
-		HashMap<String,Object> resultMap = new HashMap<String,Object>();
-		resultMap.put("result", -999);
-		resultMap.put("msg", "server inner error!");
-		return resultMap;
-	}
-	
-	public static HashMap<String,Object> getSentMsgSuccessedContent(){
-		HashMap<String,Object> resultMap = new HashMap<String,Object>();
-		resultMap.put("result", 0);
-		resultMap.put("msg", "message send successed.");
-		return resultMap;
-	}
-	
-	public static HashMap<String,Object> getSentMsgFailedContent(){
-		HashMap<String,Object> resultMap = new HashMap<String,Object>();
-		resultMap.put("result", -1);
-		resultMap.put("msg", "message send failed.");
-		return resultMap;
-	}
+//
+//	public static ResponseContent getDefaultErrorSubject(){
+//		ResponseContent rc = new ResponseContent();
+//		HashMap<String,Object> resultMap = new HashMap<String,Object>();
+//		resultMap.put("error_code", -2);
+//		resultMap.put("error_msg", "unsupport subject");
+//		rc.setResultContent(resultMap);
+//		return rc;
+//	}
+//	
+//	public static ResponseContent getDefaultErrorRequest(){
+//		ResponseContent rc = new ResponseContent();
+//		HashMap<String,Object> resultMap = new HashMap<String,Object>();
+//		resultMap.put("error_code", -1);
+//		resultMap.put("error_msg", "bad request");
+//		rc.setResultContent(resultMap);
+//		return rc;
+//	}
+//	public static ResponseContent getDefaultSuccessed(){
+//		ResponseContent rc = new ResponseContent();
+//		HashMap<String,Object> resultMap = new HashMap<String,Object>();
+//		resultMap.put("error_code", 0);
+//		resultMap.put("error_msg", "successed");
+//		rc.setResultContent(resultMap);
+//		return rc;
+//	}
+//	public static ResponseContent getInnerErrorContent(){
+//		ResponseContent rc = new ResponseContent();
+//		HashMap<String,Object> resultMap = new HashMap<String,Object>();
+//		resultMap.put("result", -999);
+//		resultMap.put("msg", "server inner error!");
+//		rc.setResultContent(resultMap);
+//		return rc;
+//	}
+//	
+//	public static ResponseContent getSentMsgSuccessedContent(){
+//		ResponseContent rc = new ResponseContent();
+//		HashMap<String,Object> resultMap = new HashMap<String,Object>();
+//		resultMap.put("result", 0);
+//		resultMap.put("msg", "message send successed.");
+//		rc.setResultContent(resultMap);
+//		return rc;
+//	}
+//	
+//	public static ResponseContent getSentMsgFailedContent(){
+//		ResponseContent rc = new ResponseContent();
+//		HashMap<String,Object> resultMap = new HashMap<String,Object>();
+//		resultMap.put("result", -1);
+//		resultMap.put("msg", "message send failed.");
+//		rc.setResultContent(resultMap);
+//		return rc;
+//	}
 }

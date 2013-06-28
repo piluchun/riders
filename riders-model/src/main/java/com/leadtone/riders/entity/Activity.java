@@ -41,7 +41,11 @@ public class Activity implements Serializable{
 
 	private Date ctime;
 
+	private String title;
+	
 	private String content;
+	
+	private String expireTime;
 	
 	private List<User> activityMembers = Lists.newArrayList(); // 有序的关联对象集合
 
@@ -82,12 +86,31 @@ public class Activity implements Serializable{
 		this.ctime = ctime;
 	}
 
+	
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
 	public String getContent() {
 		return content;
 	}
 
 	public void setContent(String content) {
 		this.content = content;
+	}
+	
+	
+
+	public String getExpireTime() {
+		return expireTime;
+	}
+
+	public void setExpireTime(String expireTime) {
+		this.expireTime = expireTime;
 	}
 
 	// 多对多定义

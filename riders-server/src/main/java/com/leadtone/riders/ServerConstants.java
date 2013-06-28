@@ -34,4 +34,6 @@ public class ServerConstants {
 	public static final String TO_SERVER = "server";
 	
 	public static final String TO_ALL = "all";
+	
+	
 }

@@ -8,6 +8,7 @@ package com.leadtone.riders.protocol.beans;
 
 public class RidersMessage {
 
+	private String version = "1";
 	private String msg_id;
 
 	private String from;
@@ -16,11 +17,19 @@ public class RidersMessage {
 
 	private String subject;
 
-	private Object content;
+	private Content content;
 	
 	private String createDate;
 	
 	private String status = "0";
+
+	public String getVersion() {
+		return version;
+	}
+
+	public void setVersion(String version) {
+		this.version = version;
+	}
 
 	public String getMsg_id() {
 		return msg_id;
@@ -56,11 +65,11 @@ public class RidersMessage {
 		this.to = to;
 	}
 
-	public Object getContent() {
+	public Content getContent() {
 		return content;
 	}
 
-	public void setContent(Object content) {
+	public void setContent(Content content) {
 		this.content = content;
 	}
 

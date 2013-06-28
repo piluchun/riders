@@ -147,7 +147,11 @@ public class User implements Serializable{
 	// 设定JSON序列化时的日期格式
 	@JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss", timezone = "GMT+08:00")
 	public void setCtime(Date ctime) {
-		this.ctime = ctime;
+		if (ctime != null){
+			this.ctime = ctime;
+		}else {
+			this.ctime = new Date();
+		}
 	}
 
 	public String getPicture() {

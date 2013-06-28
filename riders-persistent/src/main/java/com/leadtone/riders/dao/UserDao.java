@@ -6,4 +6,6 @@ import com.leadtone.riders.entity.User;
 
 public interface UserDao extends PagingAndSortingRepository<User, Long> {
 	User findByEmail(String email);
+	
+	User findByEmailAndPwd(String email,String pwd);
 }

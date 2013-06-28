@@ -1,13 +1,10 @@
 package com.leadtone.riders.service;
 
-import com.leadtone.riders.entity.User;
-
+import com.leadtone.riders.protocol.beans.Content;
 
 public interface IBizService {
-
-	public boolean register(User user) throws Exception;
 	
-	public boolean login(String email,String password);
+	public  Content process(Content requestContent,Object classInstance);
 	
 	
 }

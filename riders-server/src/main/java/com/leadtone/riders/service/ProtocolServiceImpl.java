@@ -2,7 +2,6 @@ package com.leadtone.riders.service;
 
 import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
 
-import java.util.HashMap;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.commons.lang.StringUtils;
@@ -10,52 +9,68 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.leadtone.riders.BizKeyEnum;
 import com.leadtone.riders.ConcurrentContext;
+import com.leadtone.riders.MsgConstants;
 import com.leadtone.riders.ServerConstants;
+import com.leadtone.riders.ServiceKeyEnum;
+import com.leadtone.riders.protocol.beans.Content;
 import com.leadtone.riders.protocol.beans.RidersMessage;
-import com.leadtone.riders.protocol.converter.ProtocolConverter;
+import com.leadtone.riders.protocol.converter.ResponseContentHelper;
 import com.leadtone.riders.server.RiderChannel;
 
 @Service
 public class ProtocolServiceImpl implements IProtocolService {
 
-	private static final Logger log = Logger.getLogger(ProtocolServiceImpl.class);
+	private static final Logger log = Logger
+			.getLogger(ProtocolServiceImpl.class);
 
-	private ConcurrentHashMap<String, RiderChannel> channelsMap = ConcurrentContext.getChannelMapInstance();
+	private ConcurrentHashMap<String, RiderChannel> channelsMap = ConcurrentContext
+			.getChannelMapInstance();
 
 	@Autowired
 	private IBizService bizService;
+	
+	@Autowired
+	private UserServiceImpl userService;
 
 	@Override
-	public HashMap<String, Object> process(RidersMessage message) {
-		HashMap<String, Object> result = new HashMap<String, Object>();
+	public Content dispatch(RidersMessage message) {
+		Content result = null;
 		String subject = message.getSubject();
-
 		if (StringUtils.isBlank(subject)) {
-			return ProtocolConverter.getDefaultErrorSubject();
+			result = ResponseContentHelper.genSimpleResponseContentWithoutType(
+					MsgConstants.ERROR_CODE_2, "unsupport subject");
+			result.setType(MsgConstants.SERVER);
+			return result;
+
 		}
-		BizKeyEnum mk = BizKeyEnum.getEnum(subject.toUpperCase());
+		ServiceKeyEnum mk = ServiceKeyEnum.getEnum(subject.toUpperCase());
+		Content requestContent = message.getContent();
 		switch (mk) {
-		case LOGIN:
-			result = authUser(message.getContent());
+		case USER:
+			result = bizService.process(requestContent,userService);
 			break;
-		case REGISTER_USER:
+		case FRIEND:
+			// result = register(message.getContent());
 			break;
-		case GET_USER_PROFILE:
+		case ACTIVITY:
 			break;
-		case GET_TEAM_INFO:
+		case COMMENT:
 			break;
-		case GET_FRIENDS:
+		case TEAM:
 			break;
-		case GET_ACTIVITY:
+		case SOS:
 			break;
-		case GET_ACTIVITY_LIST:
+		case REPORT:
 			break;
-		case UPDATE_USER_PROFILE:
+		case SUGGESTION:
+			break;
+		case VERSION:
 			break;
 		default:
-			result = ProtocolConverter.getDefaultErrorSubject();
+			result = ResponseContentHelper.genSimpleResponseContentWithoutType(
+					MsgConstants.ERROR_CODE_2, "unsupport subject");
+			result.setType(MsgConstants.SERVER);
 		}
 		return result;
 
@@ -83,7 +98,6 @@ public class ProtocolServiceImpl implements IProtocolService {
 			if (channel.isLogined()) {
 				channel.getChannel().write(new TextWebSocketFrame(request));
 			} else {
-				// TODO
 				log.info("BAD REQUEST. (not logined)");
 			}
 		} catch (Exception e) {
@@ -91,23 +105,4 @@ public class ProtocolServiceImpl implements IProtocolService {
 		}
 	}
 
-	@SuppressWarnings("unchecked")
-	private HashMap<String, Object> authUser(Object content) {
-		HashMap<String, Object> resultMap = new HashMap<String, Object>();
-		try {
-			HashMap<String, String> contentMap = (HashMap<String, String>) content;
-			if (bizService.login(contentMap.get("email"),
-					contentMap.get("password"))) {
-				resultMap.put("result", 0);
-				resultMap.put("msg", "login successed!");
-			} else {
-				resultMap.put("result", -1);
-				resultMap.put("msg", "login failed!");
-			}
-		} catch (Exception e) {
-			log.error("AuthUser Error : " + e.getMessage());
-			log.error(e);
-		}
-		return resultMap;
-	}
 }
