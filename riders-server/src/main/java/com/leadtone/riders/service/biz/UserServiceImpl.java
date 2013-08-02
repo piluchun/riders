@@ -1,4 +1,4 @@
-package com.leadtone.riders.service;
+package com.leadtone.riders.service.biz;
 
 import java.util.HashMap;
 
@@ -73,6 +73,41 @@ public class UserServiceImpl {
 		return resultContent;
 	}
 
+	public Content addFriend(HashMap<String, Object> contentMap){
+		Content resultContent = null;
+		try {
+			
+			
+		} catch (Exception e) {
+			resultContent = ResponseContentHelper
+					.genSimpleResponseContentWithoutType(
+							MsgConstants.SERVER_INNER_ERROR_CODE,
+							MsgConstants.SERVER_INNER_ERROR_MSG);
+			log.error("AuthUser Error : " + e.getMessage());
+			log.error(e);
+		}
+		return resultContent;
+	}
+	
+	public Content removeFriend(HashMap<String, Object> contentMap){
+		Content resultContent = null;
+		try {
+			
+			
+		} catch (Exception e) {
+			resultContent = ResponseContentHelper
+					.genSimpleResponseContentWithoutType(
+							MsgConstants.SERVER_INNER_ERROR_CODE,
+							MsgConstants.SERVER_INNER_ERROR_MSG);
+			log.error("AuthUser Error : " + e.getMessage());
+			log.error(e);
+		}
+		return resultContent;
+	}
+	
+	
+	
+	
 	public static void main(String[] args) {
 
 		HashMap<String, String> map = new HashMap<String, String>();

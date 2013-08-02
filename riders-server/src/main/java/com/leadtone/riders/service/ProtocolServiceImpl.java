@@ -17,6 +17,7 @@ import com.leadtone.riders.protocol.beans.Content;
 import com.leadtone.riders.protocol.beans.RidersMessage;
 import com.leadtone.riders.protocol.converter.ResponseContentHelper;
 import com.leadtone.riders.server.RiderChannel;
+import com.leadtone.riders.service.biz.UserServiceImpl;
 
 @Service
 public class ProtocolServiceImpl implements IProtocolService {

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.leadtone.riders.protocol.beans.Content;
-import com.leadtone.riders.protocol.beans.RequestContentBack;
 import com.leadtone.riders.protocol.beans.RidersMessage;
 
 public class TestJackson {

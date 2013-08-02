@@ -179,11 +179,12 @@ public class RidersWebSocketServerHandler extends
 				// 首先判断subject是不是LOGIN 如果是就判断返回值如果是 {"result":0,"msg":"xxx"}
 				// 则表明登陆成功，将EMAIL地址和通道信息缓存
 				// map 里面存放的是 From 为key ，RiderChannel为Value 的键值对。
-				if (ServerConstants.SUBJECT_LOGIN.equalsIgnoreCase(message.getSubject())) {
+				if (ServerConstants.SUBJECT_LOGIN.equalsIgnoreCase(message.getContent().getType())) {
 					String resultCode = (String) resultContent.getData().get("result");
 					if (Integer.valueOf(resultCode) == 0) {
 						riderChannel.setLogined(true);
-						channelsMap.put(message.getFrom(), riderChannel);
+						String email = (String) message.getContent().getData().get("email");
+						channelsMap.put(email, riderChannel);
 					}
 				}
 				message.setContent(resultContent);

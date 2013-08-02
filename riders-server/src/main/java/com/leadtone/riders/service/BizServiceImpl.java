@@ -17,20 +17,11 @@ public class BizServiceImpl implements IBizService {
 	public  Content process(Content requestContent,Object classInstance) {
 		String type = requestContent.getType();
 		Content content =  null;
-//		if ("login".equalsIgnoreCase(type)) {
-//			content = authUser(requestContent.getData());
-//			content.setType(type);
-//		} else if ("register".equalsIgnoreCase(type)) {
-//			content = register(requestContent.getData());
-//			content.setType(type);
-//		}
-
 		Method[] methods = ReflectionUtils.getAllDeclaredMethods(classInstance.getClass());
 		for (Method method : methods) {
 			RidersBiz rb = AnnotationUtils.findAnnotation(method,RidersBiz.class);
 			if (rb!=null && type.equals(rb.value())) {
 				try {
-//					TODO
 					content =(Content) method.invoke(classInstance, requestContent.getData());
 					content.setType(type);
 					break;
