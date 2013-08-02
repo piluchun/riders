@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../jquery/jquery-1.10.2.min.js"></script>
+    <script src="../jquery/jquery.mobile-1.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile-1.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile.structure-1.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile.theme-1.3.1.min.css">
+    <script type="text/javascript">
+	$(function(){
+		$("#login_btn").click(function(){
+			window.location.href="user_profile.html";
+			});
+		});
+	</script>
+</head>
+<body>
+    <div data-role="page">
+ 
+        <div data-role="header" data-theme="b" data-position="fixed">
+            <h1>骑乐汇</h1>
+        </div><!-- /header -->
+ 
+        <div data-role="content">
+         <label for="text-basic">用户名：</label>
+		<input type="text" name="textinput-hide" id="textinput-hide" placeholder="电子邮件地址" value="">
+            <label for="password">密码：</label>
+<input type="password" name="password" id="password" value="" autocomplete="off">
+
+<fieldset class="ui-grid-a">
+    <div class="ui-block-a"><button type="submit" data-theme="b" id="login_btn">登陆</button></div>
+    <div class="ui-block-b"><a href="reg.html" data-role="button" data-theme="c">注册</a>
+    </div>
+</fieldset>
+<a href="main.html" data-role="button" data-theme="c">位置</a>
+
+
+        </div><!-- /content -->
+ 
+        <div data-role="footer" data-theme="b"  data-position="fixed">
+            <h4>享受骑行的生活</h4>
+        </div><!-- /footer -->
+ 		
+        
+    </div><!-- /page -->
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile-1.3.1.css">
+    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile.structure-1.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile.theme-1.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="../css/rider.css"/>
+    <script src="../jquery/jquery-1.9.1.min.js"></script>
+	<script src="../js/global/init.js"></script>
+    <script src="../jquery/jquery.mobile-1.3.1.js"></script>
+	<script src="../js/global/global.js"></script>  
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=A7df46351cab62c898443c349502f030"></script>
+	<script type="text/javascript" src="../js/LuShu.js"></script>
+    <script src="../js/riders.js"></script>
+</head>
+
+<body>
+ <div data-role="page" id="lushu_page" data-footer="global/footer.html" data-dom-cache="true" data-add-back-btn="true">
+<script type="text/javascript">
+$("#lushu_page").on("pageshow",function(){
+	var src = "东大桥";
+	var target = "富丰桥";
+	var ridersLushu = new RidersLushu(src,target);
+	ridersLushu.init();
+	$("#go").click(function(){
+		src = $("#src").val();
+		target = $("#target").val();
+		ridersLushu = new RidersLushu(src,target);
+		ridersLushu.init();
+		ridersLushu.query();
+	});
+});
+</script>
+<div data-role="header" data-theme="b">
+    <div data-role="controlgroup" data-type="horizontal" data-mini="true" align="center">
+    <a href="#" id="by_foot" data-role="button"  data-iconpos="notext" data-icon="plus" data-theme="b">步行</a>
+    <a href="#" id="by_bus" data-role="button"  data-iconpos="notext" data-icon="delete" data-theme="b">公交</a>
+    <a href="#" id="by_car" data-role="button"  data-iconpos="notext" data-icon="grid" data-theme="b">驾车</a>
+    </div> 
+    <a href="#" data-icon="arrow-r" class="ui-btn-right" id="go">出发</a>
+</div>
+
+<div data-role="content">
+    <ul data-role="listview"><li id="bar">
+    <fieldset class="ui-grid-a">
+    	<div class="ui-block-a" align="center" style="width:45%;margin:0 3%"> 
+        <input type="text" data-mini="true" id="src" value="东大桥" /></div>
+    	<div class="ui-block-b" align="center" style="width:45%;margin:0 0"> 
+        <input type="text" data-mini="true" id="target" value="富丰路"/></div>
+	</fieldset>
+    </li>
+    <li style="margin:0 0;padding:0"><div id="map_canvas" style="width:100%;height:480px"></div> </li>
+    </ul>
+    </div>
+</div>
+
+</div>
+</body>
+</html>

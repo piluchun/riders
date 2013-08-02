@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../jquery/jquery-1.10.2.min.js"></script>
+    <script src="../jquery/jquery.mobile-1.3.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile-1.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile.structure-1.3.1.min.css">
+    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile.theme-1.3.1.min.css">
+</head>
+
+<body>
+ <div data-role="page" data-add-back-btn="true">
+
+<div data-role="header" data-theme="b"  >
+    <h1>用户注册</h1>
+    <a href="#" data-icon="check" data-theme="c"  class="ui-btn-right">提交</a>
+</div>
+<div data-role="content">
+<form>
+<div data-role="fieldcontain">
+<label for="email">电子邮件地址：</label>
+		<input type="text" name="email" id="email" placeholder="电子邮件地址" value=""><br />
+        <label for="password-1">密码：</label>
+		<input type="password" data-clear-btn="false" name="password-1" id="password-1" placeholder="密码" value="" autocomplete="off"><br />
+         <label for="password-2">确认密码：</label>
+		<input type="password" data-clear-btn="true" name="password-2" id="password-2" placeholder="确认密码" value="" autocomplete="off">
+        </div>
+        </form>
+</div>
+
+ <div data-role="footer" data-theme="b"  data-position="fixed">
+            <h4>享受骑行的生活</h4>
+        </div>
+</div>
+
+</body>
+</html>
