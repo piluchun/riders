@@ -26,7 +26,7 @@ SERVER_BIN=$SERVER_HOME/bin
 PATH=$PATH:$JAVA_HOME/bin
 
 # Configure CLASSPATH
-CLASSPATH=$SERVER_BIN/dbproxy.jar
+CLASSPATH=$SERVER_BIN/riders-server.jar
 cd $SERVER_LIB
 for l in `ls`
 do
@@ -70,5 +70,5 @@ JAVA_OPTS="-Xms1536m -Xmx1536m -Xmn384m -XX:PermSize=512M -XX:MaxPermSize=1024m 
 
 ulimit -n 8192
 
-$JAVA_HOME/bin/java $JAVA_OPTS  com.leadtone.mig.DbProxyServer $1 1>/dev/null 2>/dev/null
+$JAVA_HOME/bin/java $JAVA_OPTS  com.leadtone.riders.RidersServer $1 1>/dev/null 2>/dev/null
 

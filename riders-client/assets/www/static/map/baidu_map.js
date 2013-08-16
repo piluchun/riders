@@ -1,29 +1,7 @@
-/**************************************
-启动时自动加载底部菜单
-**************************************/
 
-var $page;
-$(document).on("pagecreate", function(e) {
-	$page = $(e.target);
-	var pageId = $page.attr("id");
-	//加载底部菜单
-	createFooter($page,pageId);
-	pageRefresh();
-});
-
-/**************************************
-* 位置对象
-* @property init 初始化一张默认的地图
-*
-**************************************/
-var position = {init:function(){
-  	var map = new BMap.Map("map_canvas");            // 创建Map实例
-	var point = new BMap.Point(116.404, 39.915);    // 创建点坐标
-	map.centerAndZoom(point,15);                     // 初始化地图,设置中心点坐标和地图级别。
-	map.enableScrollWheelZoom();
-}};
-
-
+define(function(require, exports, module) {
+	
+require("lushu");
 
 /**************************************
 * 路书
@@ -34,14 +12,19 @@ var position = {init:function(){
 function RidersLushu(src,target){
 	this.src = src;
 	this.target = target;
-	var map;
-	var lushu;
-	this.init = function(){
-		map = new BMap.Map('map_canvas');
+	var map = this.init();
+	this.query(map);
+	}
+	
+	RidersLushu.prototype.init = function(){
+		var map = new BMap.Map('map_canvas');
 		map.centerAndZoom(new BMap.Point(116.404, 39.915), 13);
+		map.enableScrollWheelZoom();
 		//alert("init function :" +map);
+		return map;
 		}
-	this.query = function(){
+	
+	RidersLushu.prototype.query = function(map){
 		//alert("query function :" +map);
 		var myIcon = new BMap.Icon("../img/2.gif",
 					{width:40,height:40},{anchor:new BMap.Size(40,40)});  
@@ -52,7 +35,7 @@ function RidersLushu(src,target){
 					map.addOverlay(new BMap.Polyline(arrPois, {strokeColor: '#111'}));
 					map.setViewport(arrPois);
 					lushu = new BMapLib.LuShu(map,arrPois,{
-					defaultContent:"从"+src+"到"+target,
+					defaultContent:"从"+src.value+"到"+target.value,
 					speed:4500,
 					icon:myIcon,
 					landmarkPois: [
@@ -65,7 +48,11 @@ function RidersLushu(src,target){
 				}
 			}
 		});
-		drv.search(src, target);
-		}
-	}
+		drv.search(this.src, this.target);
+		};
+	
+	module.exports = RidersLushu;
+	})
+
+
   

@@ -4,32 +4,34 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile-1.3.1.min.css">
-    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile.structure-1.3.1.min.css">
-    <link rel="stylesheet" type="text/css" href="../jquery/jquery.mobile.theme-1.3.1.min.css">
     <link rel="stylesheet" type="text/css" href="../css/rider.css">
-    <script src="../jquery/jquery-1.9.1.min.js"></script>
-	<script src="../js/global/init.js"></script>
-    <script src="../jquery/jquery.mobile-1.3.1.js"></script>
-	<script src="../js/global/global.js"></script>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=1.5&ak=A7df46351cab62c898443c349502f030"></script>
-    <script type="text/javascript" src="../js/LuShu.js"></script>
-    <script src="../js/riders.js"></script>
+    <script src="../jquery/jquery-1.9.1.min.js"></script>
+	<script src="../js/global/initJQM.js"></script>
+    <script src="../jquery/jquery.mobile-1.3.1.js"></script>
+    <script src="../js/global/global.js"></script>
+    <script src="../static/riders.js"></script>
+    <script src="../sea-modules/sea/sea.min-2.1.1.js"></script>
+	<script type="text/javascript">
+ 	seajs.config({
+				base:"../sea-modules/",
+				alias:{
+					"cordova":"cordova/cordova-2.7.0.js",
+					"jquery":"jquery/jquery-1.9.1.min.js",
+					"jqm":"jquery/jquery.mobile-1.3.1.js",
+					"lushu":"lushu/LuShu_min.js",
+					"underscore":"underscore/underscore-min.js",
+					"mustache":"mustache/mustache.js"
+					}
+				});
+	seajs.use("../static/user/main");
+ </script> 
 </head>
 
 <body>
 <!-- Start of first page -->
  <div data-role="page" data-footer="global/footer.html" id="main" data-dom-cache="true" data-add-back-btn="true">
- <script type="text/javascript">
-    $(function() {
-        $("#userList a").click(function(){
-			var name = $("h2",this).text();
-			if (name==""){
-				 name = $(this).text().trim();
-				}
-			$.mobile.changePage("user.html?name="+name);
-			}); 
-        })
-    </script> 
+
         <div data-role="header" data-theme="b" data-position="fixed">
             <h1>骑乐汇</h1>
         </div><!-- /header -->
@@ -51,7 +53,7 @@
     <li><a href="#">谈权</a></li>
     <li><a href="#">付帅</a></li>
     <li><a href="#">阿面</a></li>
-    <li>皮路春</li>
+    <li><a href="#">皮路春</a></li>
 </ul>
         </div>
   
