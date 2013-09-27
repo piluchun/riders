@@ -71,6 +71,8 @@ public class User implements Serializable{
 	private String roles;
 	
 	private List<User> friendList = Lists.newArrayList(); // 有序的关联对象集合
+	
+	private byte[] pictureFile;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -231,8 +233,18 @@ public class User implements Serializable{
 		public void setFriendList(List<User> friendList) {
 			this.friendList = friendList;
 		}
+		
+		
 	
-	
+		@Transient 
+		public byte[] getPictureFile() {
+			return pictureFile;
+		}
+
+		public void setPictureFile(byte[] pictureFile) {
+			this.pictureFile = pictureFile;
+		}
+
 	@Override
 	public String toString() {
 		return ToStringBuilder.reflectionToString(this);

@@ -11,11 +11,9 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.ManyToOne;
 import javax.persistence.OrderBy;
-import javax.persistence.PrimaryKeyJoinColumn;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 
 import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.hibernate.annotations.Fetch;
@@ -34,7 +32,7 @@ public class Team implements Serializable{
 
 	private Long tid;
 	
-	private Long master_id;
+//	private Long master_id;
 	
 	private User leader;
 
@@ -56,8 +54,9 @@ public class Team implements Serializable{
 		this.tid = tid;
 	}
 	
-	@OneToOne
-	@PrimaryKeyJoinColumn
+	@ManyToOne
+//	@PrimaryKeyJoinColumn
+	@JoinColumn(name="master_id")
 	public User getLeader() {
 		return leader;
 	}
@@ -71,13 +70,13 @@ public class Team implements Serializable{
 	}
 	
 
-	public Long getMaster_id() {
-		return master_id;
-	}
-
-	public void setMaster_id(Long master_id) {
-		this.master_id = master_id;
-	}
+//	public Long getMaster_id() {
+//		return master_id;
+//	}
+//
+//	public void setMaster_id(Long master_id) {
+//		this.master_id = master_id;
+//	}
 
 	public void setCtime(Date ctime) {
 		this.ctime = ctime;
