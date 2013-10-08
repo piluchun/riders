@@ -33,7 +33,7 @@
 		<div id="content">
 			<div class="btn-group">
 			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-					 车队操作
+					 车队
 					<span class="caret"></span>
 				</a>
 			<ul  class="dropdown-menu">
@@ -46,19 +46,19 @@
 					<li class="divider"></li>
 				</shiro:hasRole>
 				<shiro:hasRole name="user">
-					<li><a href="${ctx}/user/toFindFriend">寻找好友</a></li>
+					<li><a href="${ctx}/team/toFindTeam">寻找车队</a></li>
 					<li class="divider"></li>
 				</shiro:hasRole>
 			</ul>
 		</div>
 		<div class="btn-group">
 			<a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
-					我的好友
+					好友
 					<span class="caret"></span>
 				</a>
 			<ul  class="dropdown-menu">
 				<shiro:hasRole name="user">
-					<li><a href="${ctx}/team/create">创建车队</a></li>
+					<li><a href="${ctx}/user/showFriend">我的好友</a></li>
 					<li class="divider"></li>
 				</shiro:hasRole>
 				<shiro:hasRole name="user">

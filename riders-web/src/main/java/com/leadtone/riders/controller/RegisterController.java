@@ -1,16 +1,30 @@
 package com.leadtone.riders.controller;
 
+import java.io.File;
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.ServletRequestDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartHttpServletRequest;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
+import org.springframework.web.multipart.support.ByteArrayMultipartFileEditor;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.leadtone.riders.constants.Constants;
 import com.leadtone.riders.entity.User;
 import com.leadtone.riders.service.impl.UserService;
 
@@ -27,12 +41,34 @@ public class RegisterController {
 	}
 
 	@RequestMapping(value="register",method = RequestMethod.POST)
-	public String register(@Valid User user, RedirectAttributes redirectAttributes) {
+	public String register(@Valid User user,MultipartHttpServletRequest request) throws IOException {
 		log.info(" begin to register");
+		MultipartHttpServletRequest multireq = (MultipartHttpServletRequest)request; 
+        CommonsMultipartFile file = (CommonsMultipartFile) multireq.getFile("pictureFile"); 
+         
+        //保存上传图片
+        String contentpath = request.getSession().getServletContext().getRealPath("/");
+        File contentFile = new File(contentpath);
+        while(!contentFile.getName().contains("webapps")&&!contentFile.getName().contains("wtpwebapps")){
+        	contentFile = contentFile.getParentFile();
+        }
+        String md5 = DigestUtils.md5Hex(user.getEmail());
+        String endfilePath = Constants.PICTURE_FILE_PATH + md5 +"/";
+        String filepath = contentFile.getAbsolutePath() + endfilePath;
+        log.info("filepath-->"+filepath);
+        if(!new File(filepath).exists()){
+        	new File(filepath).mkdirs();
+        }
+        String extName = file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf("."));
+//        String extName = ".jpg";
+        String fileName = md5+extName;
+        File save = new File(filepath + fileName); 
+         
+        FileCopyUtils.copy(user.getPictureFile(), save); 
+		user.setPicture("http://192.168.8.95:10002/"+endfilePath + fileName);
+		log.info("icon-->"+user.getPicture());
 		userService.registerUser(user);
-		log.info("222222222222222222222");
-		redirectAttributes.addFlashAttribute("username", user.getEmail());
-		log.info("33333333333333333333");
+//		redirectAttributes.addFlashAttribute("username", user.getEmail());
 		return "redirect:/login";
 	}
 
@@ -47,6 +83,13 @@ public class RegisterController {
 		} else {
 			return "false";
 		}
+	}
+	
+	@InitBinder
+	protected void initBinder(HttpServletRequest request,
+			ServletRequestDataBinder binder) throws ServletException {
+		binder.registerCustomEditor(byte[].class,
+				new ByteArrayMultipartFileEditor());
 	}
 	
 //	@InitBinder  

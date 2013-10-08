@@ -11,11 +11,12 @@
 <body>
 		<table id="contentTable" class="table table-striped table-bordered table-condensed">
 			<c:if test="${ empty user}">
-				<thead><tr><td cols="3"><font color="red" align="center">	sorry,您查找的好友不存在         </font></td></tr></thead></c:if>
+				<thead><tr><td cols="4"><font color="red" align="center">	sorry,您查找的好友不存在         </font></td></tr></thead></c:if>
 			<c:if test="${!empty user}">
-			<thead><tr><th>用户名</th><th>昵称</th><th>性别</th><th>操作</th></tr></thead>
+			<thead><tr><th>头像</th><th>用户名</th><th>昵称</th><th>性别</th><th>操作</th></tr></thead>
 				<tbody>
 					<tr>
+						<td><img src="${user.picture }" width=60 height=50/></td>
 						<td>${user.email}</td>
 						<td>${user.nickname}</td>
 						<td>

@@ -55,7 +55,7 @@ public class TeamController {
 		Date date = new Date();
 		team.setCtime(date);
 		team.setLeader(leader);
-		team.setMaster_id(leader.getUid());
+		team.getTeamMembers().add(leader);
 		teamService.saveTeam(team);
 		redirectAttributes.addFlashAttribute("message", "添加team成功");
 		return "redirect:/team/list";
@@ -63,11 +63,15 @@ public class TeamController {
 	
 	@RequestMapping(value="list",method = RequestMethod.GET)
 	public String list(Model model){
-		List<Team> teamList = teamService.getAllList();
+//		List<Team> teamList = teamService.getAllList();
+		ShiroUser su = (ShiroUser)SecurityUtils.getSubject().getPrincipal();
+		User user  = userService.findUserByEmail(su.getUsername());
+		
+		List<Team> teamList = teamService.getTeamListByUid(user.getUid());
 		List<Team> List = new ArrayList<Team>();
 		for(Team team:teamList){
-			User leader = getUser(team.getMaster_id());
-			team.setLeader(leader);
+//			User leader = getUser(team.getMaster_id());
+//			team.setLeader(leader);
 			List.add(team);
 		}
 		model.addAttribute("list", List);
@@ -104,14 +108,63 @@ public class TeamController {
 	@RequestMapping(value="toShowTeamMember",method = RequestMethod.GET)
 	public ModelAndView toShowTeamMember(@RequestParam("tid") String tid){
 		ModelAndView mav = new ModelAndView();
-//		ShiroUser su = (ShiroUser)SecurityUtils.getSubject().getPrincipal();
-//		User user  = userService.findUserByEmail(su.getUsername());
+		ShiroUser su = (ShiroUser)SecurityUtils.getSubject().getPrincipal();
+		User user  = userService.findUserByEmail(su.getUsername());
 		Team team = teamService.findTeamByTid(tid);
 		List<User> list = team.getTeamMembers();
+		mav.addObject("uid", user.getUid());
 		mav.addObject("list", list);
 		mav.addObject("team",team);
 		mav.setViewName("team/showTeamMember");
 		return mav;
+	}
+	
+	@RequestMapping(value="toFindTeam",method = RequestMethod.GET)
+	public ModelAndView toFindTeam(){
+		ModelAndView mav = new ModelAndView();
+		mav.setViewName("team/findTeam");
+		return mav;
+	}
+	
+	@RequestMapping(value="findTeam",method = RequestMethod.POST)
+	public ModelAndView findTeam(@RequestParam("teamname") String teamname){
+		ModelAndView mav = new ModelAndView();
+		Team team = teamService.findTeamByTeamname(teamname);
+//		User leader = getUser(team.getMaster_id());
+//		team.setLeader(leader);
+		mav.addObject("team", team);
+		mav.setViewName("team/showFindTeam");
+		return mav;
+	}
+	
+	@RequestMapping(value="deleteTeamMember",method = RequestMethod.GET)
+	public String deleteFriend(@RequestParam("uids") String uids,@RequestParam("tid") String tid) {
+		ShiroUser su = (ShiroUser)SecurityUtils.getSubject().getPrincipal();
+		User user  = userService.findUserByEmail(su.getUsername());
+		Team team = teamService.findTeamByTid(tid);
+		if(team!=null && team.getLeader().getUid().equals(user.getUid())){
+			String[] uidArr = uids.split(",");
+			for(String str:uidArr){
+				User friend = userService.getUserByUid(Long.parseLong(str));
+				if(user.getFriendList().contains(friend)){
+					team.getTeamMembers().remove(friend);
+				}
+			}
+		}
+		teamService.saveTeam(team);
+		return "redirect:/team/list";
+	}
+	
+	@RequestMapping(value="applyAddTeam",method = RequestMethod.GET)
+	public String applyAddTeam(@RequestParam("tid") String tid){
+		Team team = teamService.findTeamByTid(tid);
+		ShiroUser su = (ShiroUser)SecurityUtils.getSubject().getPrincipal();
+		User user  = userService.findUserByEmail(su.getUsername());
+		if(!team.getTeamMembers().contains(user)){
+			team.getTeamMembers().add(user);
+		}
+		teamService.saveTeam(team);
+		return "redirect:/team/list";
 	}
 	
 	

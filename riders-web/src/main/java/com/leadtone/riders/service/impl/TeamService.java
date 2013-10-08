@@ -31,4 +31,16 @@ public class TeamService {
 		Team team  = teamDao.findTeamByTid(Long.parseLong(tid));
 		return team;
 	}
+
+
+	public Team findTeamByTeamname(String teamname) {
+		Team team = teamDao.findTeamByTeamname(teamname);
+		return team;
+	}
+	
+	public List<Team>  getTeamListByUid(long uid){
+		
+		List<Team> list = teamDao.findTeamByUid(uid);
+		return list;
+	}
 }

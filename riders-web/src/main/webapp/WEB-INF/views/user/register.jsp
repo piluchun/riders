@@ -18,7 +18,7 @@
 	<script src="${ctx}/static/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
 	<script src="${ctx}/static/jquery-validation/1.11.0/jquery.validate.min.js" type="text/javascript"></script>
 	<script src="${ctx}/static/jquery-validation/1.11.0/messages_bs_zh.js" type="text/javascript"></script>
-	<script src="${ctx}/static/datepicker/WdatePicker.js" type="text/javascript"></script>">
+	<script src="${ctx}/static/datepicker/WdatePicker.js" type="text/javascript"></script>
 	<script>
 		$(document).ready(function() {
 			//聚焦第一个输入框
@@ -43,7 +43,7 @@
 <body>
 	<div class="container">
 	<%@ include file="/WEB-INF/layouts/header.jsp"%>
-	<form id="inputForm" action="${ctx}/register" method="post" class="form-horizontal">
+	<form id="inputForm" action="${ctx}/register" method="post" enctype="multipart/form-data" class="form-horizontal" >
 		<fieldset>
 			<legend><small>用户注册</small></legend>
 			<div class="control-group">
@@ -97,9 +97,9 @@
 				</div>
 			</div>
 			<div class="control-group">
-				<label for="picture" class="control-label">头像:</label>
+				<label for="pictureFile" class="control-label">头像:</label>
 				<div class="controls">
-					<input type="text" id="picture" name="picture" class="input-large"/>
+					<input type="file" id="pictureFile" name="pictureFile" class="input-large"/>
 				</div>
 			</div>
 			<div class="control-group">

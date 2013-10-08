@@ -39,6 +39,7 @@
 		<tr><th>好友列表</th></tr>
 		 	<c:forEach items="${list }" var="user">
 		 	<tr>
+		 		<td><img src="${user.picture }" width=60 height=50/></td>
 			 	<td>
 				 	<input  type="checkbox" value="${user.uid }" onclick="formname.uid.checked=!this.checked"/>${user.nickname }
 				<!-- 	<input id="ckAfter" checked="checked" type="checkbox" value="${user.uid }" onclick="formname.ckBefor.checked=!this.checked"/>${user.nickname }  -->
@@ -46,7 +47,7 @@
 		 	</tr>
 		 	</c:forEach>
 		 	<tr>
-		 		<td><input type="button" id="inventation"  value="邀请"></td>
+		 		<td cols="2"><input type="button" id="inventation"  value="邀请"></td>
 		 	</tr>
 		 </c:if>
 		</table>

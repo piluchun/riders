@@ -1,5 +1,7 @@
 package com.leadtone.riders.controller;
 
+import java.util.List;
+
 import org.apache.shiro.SecurityUtils;
 import org.jboss.logging.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +14,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import com.leadtone.riders.entity.Team;
 import com.leadtone.riders.entity.User;
 import com.leadtone.riders.filter.ShiroDbRealm.ShiroUser;
+import com.leadtone.riders.service.impl.TeamService;
 import com.leadtone.riders.service.impl.UserService;
 
 @Controller
@@ -23,6 +27,9 @@ public class UserController {
 
 	@Autowired
 	private UserService userService;
+	
+	@Autowired
+	private TeamService teamService;
 
 	@RequestMapping(value="toFindFriend",method = RequestMethod.GET)
 	public String toFindFriend() {
@@ -48,7 +55,32 @@ public class UserController {
 		}
 		userService.saveUser(user);
 		redirectAttributes.addFlashAttribute("message", "添加好友" + user.getEmail() + "成功");
-		return "redirect:/team/list";
+		return "redirect:/user/showFriend";
+	}
+	
+	@RequestMapping(value="showFriend",method = RequestMethod.GET)
+	public ModelAndView showFriend() {
+		ModelAndView mav = new ModelAndView();
+		ShiroUser su = (ShiroUser)SecurityUtils.getSubject().getPrincipal();
+		User user  = userService.findUserByEmail(su.getUsername());
+		mav.addObject("user", user);
+		mav.setViewName("user/showFriend");
+		return mav;
+	}
+	
+	@RequestMapping(value="deleteFriend",method = RequestMethod.GET)
+	public ModelAndView deleteFriend(@RequestParam("uid") String uid) {
+		ModelAndView mav = new ModelAndView();
+		ShiroUser su = (ShiroUser)SecurityUtils.getSubject().getPrincipal();
+		User user  = userService.findUserByEmail(su.getUsername());
+		User friend = userService.getUserByUid(Long.parseLong(uid));
+		if(user.getFriendList().contains(friend)){
+			user.getFriendList().remove(friend);
+		}
+		userService.saveUser(user);
+		mav.addObject("user", user);
+		mav.setViewName("user/showFriend");
+		return mav;
 	}
 
 	/**
