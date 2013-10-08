@@ -15,7 +15,7 @@
 				<thead><tr><td cols="3"><font color="red" align="center">	sorry,您查找的车队不存在         </font></td></tr></thead>
 			</c:if>
 			<c:if test="${!empty team}">
-			<thead><tr><th>车队名</th><th>车队队长</th><th>车队申明</th><th>建队时间</th><th>加入车队</th></tr></thead>
+			<thead><tr><th>车队名</th><th>车队队长</th><th>车队申明</th><th>建队时间</th><th colspan="2">加入车队</th></tr></thead>
 				<tbody>
 					<tr>
 						<td>${team.teamname}</td>
@@ -24,7 +24,7 @@
 						<td>
 							<fmt:formatDate pattern='yyyy-MM-dd HH:mm:ss' value='${team.ctime}'></fmt:formatDate>
 						</td>
-						<td><a href="${ctx }/team/applyAddTeam?tid=${team.tid }">加入车队</a></td>
+						<td colspan="2"><a href="${ctx }/team/applyAddTeam?tid=${team.tid }">加入车队</a></td>
 					</tr>
 					<c:if test="${empty team.teamMembers}">
 						<thead><tr><th colspan="6">该车队成员还没有任何成员</th></tr></thead>
